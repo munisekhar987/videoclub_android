@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Theme for the TV application -->
+    <style name="Theme.Leanback" parent="@style/Theme.Leanback.Browse">
+        <item name="android:windowBackground">@color/colorPrimary</item>
+        <item name="defaultBrandColor">@color/colorPrimaryDark</item>
+        <item name="defaultSearchColor">@color/colorAccent</item>
+        <item name="defaultSearchIconColor">@color/colorTextLight</item>
+        <item name="defaultSearchBrightColor">@color/colorAccentDark</item>
+        <item name="android:colorPrimary">@color/colorPrimary</item>
+        <item name="android:colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="android:colorAccent">@color/colorAccent</item>
+        <item name="browseTitleTextStyle">@style/TitleTextStyle</item>
+        <item name="rowHeaderStyle">@style/RowHeaderStyle</item>
+        <item name="browsePaddingStart">48dp</item>
+        <item name="browsePaddingEnd">48dp</item>
+        <item name="browsePaddingTop">27dp</item>
+        <item name="browsePaddingBottom">27dp</item>
+    </style>
+
+    <style name="TitleTextStyle" parent="TextAppearance.Leanback.Title">
+        <item name="android:textColor">@color/colorTextDark</item>
+        <item name="android:textSize">28sp</item>
+    </style>
+
+    <style name="RowHeaderStyle" parent="Widget.Leanback.Row.Header">
+        <item name="android:textAppearance">@style/TextAppearance.Leanback.Row.Header</item>
+        <item name="android:textColor">@color/colorTextLight</item>
+    </style>
+</resources>
