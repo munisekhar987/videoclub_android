@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorYellow"
+    android:padding="16dp"
+    tools:context=".CouponVerificationActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="15%"
+        android:layout_marginTop="5%"
+        android:layout_marginEnd="15%"
+        android:layout_marginBottom="10dp"
+        android:background="@color/colorWhite"
+        android:padding="32dp">
+
+        <!-- Header Row -->
+        <LinearLayout
+            android:id="@+id/header_row"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/back_button"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:contentDescription="@string/back"
+                android:focusable="true"
+                android:padding="8dp"
+                android:src="@drawable/ic_back" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="16dp"
+                android:text="@string/have_code"
+                android:textColor="@color/colorBlack"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Divider -->
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="16dp"
+            android:background="@color/colorDivider"
+            app:layout_constraintTop_toBottomOf="@id/header_row" />
+
+        <!-- Coupon Type -->
+        <TextView
+            android:id="@+id/coupon_type_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/coupon_type"
+            android:textColor="@color/colorBlack"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/divider" />
+
+        <Spinner
+            android:id="@+id/coupon_type_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/edit_text_background"
+            android:focusable="true"
+            android:minHeight="48dp"
+            android:nextFocusDown="@id/serial_number_edit_text"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            app:layout_constraintTop_toBottomOf="@id/coupon_type_label" />
+
+        <!-- Serial Number -->
+        <TextView
+            android:id="@+id/serial_number_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/serial_number"
+            android:textColor="@color/colorBlack"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/coupon_type_spinner" />
+
+        <EditText
+            android:id="@+id/serial_number_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/edit_text_background"
+            android:focusable="true"
+            android:imeOptions="actionNext"
+            android:inputType="text"
+            android:minHeight="48dp"
+            android:nextFocusDown="@id/pin_number_edit_text"
+            android:nextFocusUp="@id/coupon_type_spinner"
+            android:padding="12dp"
+            android:textColor="@color/colorBlack"
+            android:textSize="18sp"
+            app:layout_constraintTop_toBottomOf="@id/serial_number_label" />
+
+        <!-- Pin Number -->
+        <TextView
+            android:id="@+id/pin_number_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/pin_number"
+            android:textColor="@color/colorBlack"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/serial_number_edit_text" />
+
+        <EditText
+            android:id="@+id/pin_number_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/edit_text_background"
+            android:focusable="true"
+            android:imeOptions="actionDone"
+            android:inputType="text"
+            android:minHeight="48dp"
+            android:nextFocusDown="@id/verify_button"
+            android:nextFocusUp="@id/serial_number_edit_text"
+            android:padding="12dp"
+            android:textColor="@color/colorBlack"
+            android:textSize="18sp"
+            app:layout_constraintTop_toBottomOf="@id/pin_number_label" />
+
+        <!-- Verify Button -->
+        <Button
+            android:id="@+id/verify_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="48dp"
+            android:background="@drawable/button_background"
+            android:focusable="true"
+            android:nextFocusUp="@id/pin_number_edit_text"
+            android:padding="16dp"
+            android:text="@string/verify"
+            android:textColor="@color/colorWhite"
+            android:textSize="18sp"
+            app:layout_constraintTop_toBottomOf="@id/pin_number_edit_text" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

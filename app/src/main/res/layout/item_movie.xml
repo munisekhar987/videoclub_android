@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="160dp"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:background="@drawable/movie_item_background"
+    android:focusable="true"
+    android:orientation="vertical">
+
+    <!-- Movie Thumbnail -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        app:cardBackgroundColor="@color/colorBlack"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp">
+
+        <ImageView
+            android:id="@+id/movie_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/movie_thumbnail"
+            android:scaleType="centerCrop"
+            tools:src="@drawable/empty_thumbnail" />
+    </androidx.cardview.widget.CardView>
+
+    <!-- Movie Title -->
+    <TextView
+        android:id="@+id/movie_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:maxLines="2"
+        android:textColor="@color/colorWhite"
+        android:textSize="14sp"
+        tools:text="Movie Title" />
+
+    <!-- Uploader Name -->
+    <TextView
+        android:id="@+id/uploader_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        android:textColor="@color/colorWhite"
+        android:textSize="12sp"
+        tools:text="Uploader Name" />
+
+</LinearLayout>

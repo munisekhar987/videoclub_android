@@ -71,4 +71,41 @@ public class RestClient {
 
         client.newCall(request).enqueue(callback);
     }
+
+    private static final String BASE_URL = "http://api.msgnaa.info/";
+    private static Retrofit retrofit = null;
+
+    /**
+     * Get a configured Retrofit instance
+     */
+    private static Retrofit getClient() {
+        if (retrofit == null) {
+            // Create logging interceptor for debugging
+            HttpLoggingInterceptor loggingInterceptor = new HttpLoggingInterceptor();
+            loggingInterceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
+
+            // Configure OkHttpClient with timeouts
+            OkHttpClient client = new OkHttpClient.Builder()
+                    .addInterceptor(loggingInterceptor)
+                    .connectTimeout(30, TimeUnit.SECONDS)
+                    .readTimeout(30, TimeUnit.SECONDS)
+                    .writeTimeout(30, TimeUnit.SECONDS)
+                    .build();
+
+            // Create Retrofit instance
+            retrofit = new Retrofit.Builder()
+                    .baseUrl(BASE_URL)
+                    .client(client)
+                    .addConverterFactory(GsonConverterFactory.create())
+                    .build();
+        }
+        return retrofit;
+    }
+
+    /**
+     * Get the API service
+     */
+    public static ApiService getApiService() {
+        return getClient().create(ApiService.class);
+    }
 }

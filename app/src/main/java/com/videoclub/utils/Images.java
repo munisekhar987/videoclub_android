@@ -1,5 +1,7 @@
 package com.videoclub.utils;
 
+import androidx.annotation.DrawableRes;
+
 import com.videoclub.R;
 
 public class Images {
@@ -34,4 +36,19 @@ public class Images {
     public static final int downArr = R.drawable.downarr;
     public static final int upArr = R.drawable.uparrow;
     public static final int loadingmap = R.drawable.loading;
+
+    @DrawableRes
+    public static final int HOME_ICON_RED = R.drawable.ic_home_red;
+    @DrawableRes public static final int SEARCH_ICON = R.drawable.ic_search;
+    @DrawableRes public static final int EMPTY_THUMBNAIL = R.drawable.empty_thumbnail;
+
+    public static final int LOGO = R.drawable.newlogo;
+    public static final int LOGO_1 = R.drawable.newlogo1;
+
+    // Arrow images
+    public static final int UP_ARROW = R.drawable.ic_up_arrow;
+    public static final int DOWN_ARROW = R.drawable.ic_down_arrow;
+
+    // Placeholder images
+    public static final int PLACEHOLDER = R.drawable.placeholder_image;
 }
