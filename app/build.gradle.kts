@@ -50,4 +50,11 @@ dependencies {
 
     // JSON parsing
     implementation("org.json:json:20230618")
+
+    // ExoPlayer dependencies
+    implementation 'com.google.android.exoplayer:exoplayer-core:2.18.7'
+    implementation 'com.google.android.exoplayer:exoplayer-ui:2.18.7'
+    implementation 'com.google.android.exoplayer:exoplayer-dash:2.18.7'
+    implementation 'com.google.android.exoplayer:exoplayer-hls:2.18.7'
+    implementation 'com.google.android.exoplayer:exoplayer-rtsp:2.18.7'
 }

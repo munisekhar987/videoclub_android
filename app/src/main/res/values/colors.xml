@@ -49,6 +49,10 @@
     <color name="extra_light_gray">#F0F0F0</color>
     <color name="button_grey2">#878CA1</color>
     <color name="focus_overlay">#3F51B5</color>
+
+
+
+    <!-- Basic colors -->
     <color name="colorPrimary">#FFEB3B</color>   <!-- Yellow background similar to SafeAreaView style -->
     <color name="colorPrimaryDark">#FBC02D</color>
     <color name="colorAccent">#FF4081</color>
@@ -57,4 +61,17 @@
     <color name="colorTextLight">#424242</color>
     <color name="colorDivider">#BDBDBD</color>
     <color name="colorFocusBorder">#FFFFFF</color>
+
+    <!-- Video player specific colors -->
+    <color name="colorBlack">#000000</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorRed">#FF0000</color>
+    <color name="colorGreen">#00FF00</color>
+    <color name="colorBlue">#0000FF</color>
+    <color name="colorYellow">#FFEB3B</color>
+
+    <!-- ExoPlayer specific colors -->
+    <color name="exo_black_opacity_60">#99000000</color>
+    <color name="exo_white_opacity_70">#B3FFFFFF</color>
+    <color name="exo_bottom_bar_background">#80000000</color>
 </resources>
