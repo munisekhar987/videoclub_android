@@ -1,0 +1,5 @@
+<!-- In res/drawable/selected_background.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="#E50914"/> <!-- Netflix-style red or use your app's primary color -->
+    <corners android:radius="4dp"/>
+</shape>

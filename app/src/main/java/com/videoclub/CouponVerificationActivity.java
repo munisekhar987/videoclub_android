@@ -17,9 +17,10 @@ import androidx.fragment.app.FragmentActivity;
 
 import com.videoclub.models.DropdownItem;
 import com.videoclub.utilities.Colors;
-import com.videoclub.utilities.Images;
-import com.videoclub.utilities.RestClient;
-import com.videoclub.utilities.SessionManager;
+import com.videoclub.utils.ApiService;
+import com.videoclub.utils.Images;
+import com.videoclub.utils.RestClient;
+import com.videoclub.utils.SessionManager;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -57,7 +58,7 @@ public class CouponVerificationActivity extends FragmentActivity {
 
     // Services
     private SessionManager sessionManager;
-    private RestClient.ApiService apiService;
+    private ApiService apiService;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

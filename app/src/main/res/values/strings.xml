@@ -64,6 +64,8 @@
     <string name="loading">Loading...</string>
     <string name="no_movies_found">No movies found</string>
     <string name="error_loading_data">Error loading data</string>
+    <color name="selected_text_color">#FFFFFF</color> <!-- White for selected text -->
+    <color name="default_text_color">#AAAAAA</color>
 
     <!-- Home Detail Activity -->
     <string name="play_movie">Play Movie</string>
@@ -73,6 +75,10 @@
     <!-- Cloud Star Activity -->
     <string name="openstreet_map">Openstreet Map</string>
     <string name="google_map">Google Map</string>
+
+    <!-- Video Player Activity -->
+    <string name="start_recording">Start Recording</string>
+    <string name="save_recording">Save Recording</string>
 
     <!-- Join Meeting Activity -->
     <string name="joining_meeting">Joining meeting...</string>
@@ -125,4 +131,12 @@
     <string name="refresh">REFRESH</string>
     <string name="loading_location">loading_location</string>
     <string name="loading_map">loading map\n</string>
+    <string name="no_channel_url">no_channel_url</string>
+
+
+    <!-- Add these to your existing strings.xml file -->
+
+    <string name="cloud_star_title">Cloud Star</string>
+    <string name="select_map_provider">Select Map Provider</string>
+
 </resources>

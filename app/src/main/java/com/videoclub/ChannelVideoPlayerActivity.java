@@ -11,6 +11,7 @@ import androidx.fragment.app.FragmentActivity;
 import androidx.core.view.WindowCompat;
 import androidx.core.view.WindowInsetsCompat;
 import androidx.core.view.WindowInsetsControllerCompat;
+import androidx.core.content.ContextCompat;
 import androidx.leanback.media.PlaybackTransportControlGlue;
 import androidx.leanback.widget.PlaybackControlsRow;
 
@@ -26,7 +27,7 @@ import com.google.android.exoplayer2.upstream.DataSource;
 import com.google.android.exoplayer2.upstream.DefaultDataSource;
 import com.google.android.exoplayer2.upstream.DefaultHttpDataSource;
 import com.google.android.exoplayer2.util.Util;
-import com.videoclub.utilities.Constants;
+import com.videoclub.utils.Constants;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -78,7 +79,7 @@ public class ChannelVideoPlayerActivity extends FragmentActivity {
         configurePlayerForTV();
 
         // Set background color
-        getWindow().getDecorView().setBackgroundColor(getResources().getColor(R.color.colorBlack, null));
+        getWindow().getDecorView().setBackgroundColor(ContextCompat.getColor(this, R.color.colorBlack));
 
         // Configure control visibility based on settings
         configurePlayerControls();
@@ -163,7 +164,9 @@ public class ChannelVideoPlayerActivity extends FragmentActivity {
         playerView.setUseController(true);
 
         // TV-specific focus handling
-        playerView.setDefaultFocusHighlightEnabled(true);
+        if (android.os.Build.VERSION.SDK_INT >= 26) {
+            playerView.setDefaultFocusHighlightEnabled(true);
+        }
         playerView.setFocusable(true);
 
         // Prevent controller hide on touch (TV doesn't use touch)
@@ -305,7 +308,9 @@ public class ChannelVideoPlayerActivity extends FragmentActivity {
 
             // Ensure play/pause button is focusable for TV remote
             playPauseButton.setFocusable(true);
-            playPauseButton.setDefaultFocusHighlightEnabled(true);
+            if (android.os.Build.VERSION.SDK_INT >= 26) {
+                playPauseButton.setDefaultFocusHighlightEnabled(true);
+            }
         }
 
         if (timeView != null) {

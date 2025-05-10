@@ -26,7 +26,7 @@ import com.videoclub.adapters.CategoryAdapter;
 import com.videoclub.adapters.MovieAdapter;
 import com.videoclub.models.Category;
 import com.videoclub.models.Movie;
-import com.videoclub.utilities.ApiService;
+import com.videoclub.utils.ApiService;
 import com.videoclub.utilities.Colors;
 import com.videoclub.utils.Images;
 import com.videoclub.utils.RestClient;

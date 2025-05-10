@@ -13,8 +13,7 @@ import androidx.fragment.app.FragmentActivity;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
-import com.videoclub.utilities.Colors;
-import com.videoclub.utilities.Images;
+import com.videoclub.utils.Images;
 
 /**
  * HomeDetailActivity - Shows movie details when a user clicks on a movie
