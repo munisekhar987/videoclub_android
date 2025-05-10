@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="60dp"
+    android:viewportWidth="200"
+    android:viewportHeight="60">
+
+    <!-- Background -->
+    <path
+        android:fillColor="#03A9F4"
+        android:pathData="M0,0L200,0L200,60L0,60z" />
+
+    <!-- Text: PAGER -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M40,40L40,20L60,20C65.523,20 70,24.477 70,30C70,35.523 65.523,40 60,40L40,40zM45,35L57,35C62.523,35 65,32.523 65,30C65,27.477 62.523,25 57,25L45,25L45,35z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M75,40L75,20L95,20L95,25L80,25L80,28L95,28L95,33L80,33L80,35L95,35L95,40L75,40z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M100,40L100,20L120,20C125.523,20 130,24.477 130,30C130,35.523 125.523,40 120,40L100,40zM105,35L117,35C122.523,35 125,32.523 125,30C125,27.477 122.523,25 117,25L105,25L105,35z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M135,40L135,20L155,20L155,25L140,25L140,28L155,28L155,33L140,33L140,35L155,35L155,40L135,40z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M160,40L160,20L180,20L180,25L165,25L165,28L180,28L180,33L165,33L165,35L180,35L180,40L160,40z" />
+
+    <!-- Pager icon -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M15,20L35,20L35,40L15,40z" />
+    <path
+        android:fillColor="#03A9F4"
+        android:pathData="M20,25L30,25L30,35L20,35z" />
+</vector>

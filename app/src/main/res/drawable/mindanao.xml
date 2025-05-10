@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="60dp"
+    android:viewportWidth="200"
+    android:viewportHeight="60">
+
+    <!-- Background -->
+    <path
+        android:fillColor="#4CAF50"
+        android:pathData="M0,0L200,0L200,60L0,60z" />
+
+    <!-- Text: MINDANAO -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M20,35L20,20L25,20L30,30L35,20L40,20L40,35L35,35L35,25L30,35L25,35L25,25L25,35L20,35zM45,35L45,20L50,20L50,35L45,35zM55,35L55,20L60,20L60,35L55,35zM65,35L65,20L85,20L85,25L70,25L70,30L85,30L85,35L65,35zM90,35L90,20L105,20L105,35L90,35zM95,25L95,30L100,30L100,25L95,25zM110,35L110,20L115,20L115,27L125,27L125,20L130,20L130,35L125,35L125,32L115,32L115,35L110,35zM135,35L135,20L155,20L155,35L135,35zM140,25L140,30L150,30L150,25L140,25zM160,35L160,20L180,20L180,35L175,35L175,25L165,25L165,35L160,35z" />
+
+    <!-- Island Icon -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M170,15C173.866,15 177,18.134 177,22C177,25.866 173.866,29 170,29C166.134,29 163,25.866 163,22C163,18.134 166.134,15 170,15zM170,17C167.239,17 165,19.239 165,22C165,24.761 167.239,27 170,27C172.761,27 175,24.761 175,22C175,19.239 172.761,17 170,17z" />
+</vector>

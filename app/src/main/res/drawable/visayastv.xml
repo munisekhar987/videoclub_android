@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="60dp"
+    android:viewportWidth="200"
+    android:viewportHeight="60">
+
+    <!-- Background -->
+    <path
+        android:fillColor="#9C27B0"
+        android:pathData="M0,0L200,0L200,60L0,60z" />
+
+    <!-- Text: VISAYAS TV -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M10,35L25,20L30,20L15,35L10,35zM35,35L20,20L25,20L40,35L35,35zM45,35L45,20L50,20L50,25L60,25L60,20L65,20L65,35L60,35L60,30L50,30L50,35L45,35z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M70,35L70,20L75,20L75,25L82.5,25L82.5,20L87.5,20L87.5,25L95,25L95,35L70,35zM75,30L75,30L90,30L90,30L75,30z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M100,35L100,20L120,20L120,35L115,35L115,25L105,25L105,35L100,35z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M125,35L125,20L145,20L145,25L130,25L130,35L125,35z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M150,35L150,20L155,20L155,35L150,35zM160,35L160,20L165,20L165,35L160,35z" />
+
+    <!-- TV icon -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M170,20L190,20L190,35L170,35z" />
+    <path
+        android:fillColor="#9C27B0"
+        android:pathData="M175,25L185,25L185,30L175,30z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M177,15L183,15L180,20L177,15z" />
+</vector>

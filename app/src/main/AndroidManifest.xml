@@ -5,8 +5,14 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <!-- Replace deprecated storage permissions with new media permissions -->
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
+    <uses-permission android:name="android.permission.READ_MEDIA_AUDIO" />
+    <uses-permission android:name="android.permission.READ_MEDIA_VISUAL_USER_SELECTED" />
+
+
     <!-- Additional permissions for the CheckStatusActivity -->
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.BLUETOOTH" />
@@ -21,12 +27,19 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
+    <!-- Make features optional when appropriate -->
     <uses-feature
         android:name="android.hardware.touchscreen"
         android:required="false" />
     <uses-feature
         android:name="android.software.leanback"
         android:required="true" />
+    <uses-feature
+        android:name="android.hardware.wifi"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.bluetooth"
+        android:required="false" />
 
     <application
         android:allowBackup="true"
@@ -79,20 +92,20 @@
             android:exported="false"
             android:screenOrientation="landscape" />
 
-        <activity
-            android:name=".VideoPlayerActivity"
-            android:exported="false"
-            android:screenOrientation="landscape" />
+        <!--        <activity-->
+        <!--            android:name=".VideoPlayerActivity"-->
+        <!--            android:exported="false"-->
+        <!--            android:screenOrientation="landscape" />-->
 
-        <activity
-            android:name=".KaraokeVideoPlayerActivity"
-            android:exported="false"
-            android:screenOrientation="landscape" />
+        <!--        <activity-->
+        <!--            android:name=".KaraokeVideoPlayerActivity"-->
+        <!--            android:exported="false"-->
+        <!--            android:screenOrientation="landscape" />-->
 
-        <activity
-            android:name=".SavedKarokeListActivity"
-            android:exported="false"
-            android:screenOrientation="landscape" />
+        <!--        <activity-->
+        <!--            android:name=".SavedKarokeListActivity"-->
+        <!--            android:exported="false"-->
+        <!--            android:screenOrientation="landscape" />-->
 
         <activity
             android:name=".ChannelDetailScreenActivity"
@@ -142,16 +155,16 @@
             android:screenOrientation="landscape" />
 
         <!-- OSM Activity -->
-        <activity
-            android:name=".OSMActivity"
-            android:exported="false"
-            android:screenOrientation="landscape" />
+        <!--        <activity-->
+        <!--            android:name=".OSMActivity"-->
+        <!--            android:exported="false"-->
+        <!--            android:screenOrientation="landscape" />-->
 
-        <!-- Cloud Star Test Activity -->
-        <activity
-            android:name=".CloudStarTestActivity"
-            android:exported="false"
-            android:screenOrientation="landscape" />
+        <!--        &lt;!&ndash; Cloud Star Test Activity &ndash;&gt;-->
+        <!--        <activity-->
+        <!--            android:name=".CloudStarTestActivity"-->
+        <!--            android:exported="false"-->
+        <!--            android:screenOrientation="landscape" />-->
 
         <!-- Join Meeting Activity -->
         <activity

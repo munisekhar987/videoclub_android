@@ -21,8 +21,12 @@ import com.videoclub.adapters.BottomMenuAdapter;
 import com.videoclub.adapters.LeftMenuAdapter;
 import com.videoclub.adapters.RightMenuAdapter;
 import com.videoclub.models.MenuItem;
-import com.videoclub.utilities.Constants;
-import com.videoclub.utilities.SessionManager;
+import com.videoclub.utils.ApiService;
+import com.videoclub.utils.Constants;
+import com.videoclub.utils.GridViewExtensions;
+import com.videoclub.utils.Images;
+import com.videoclub.utils.SessionManager;
+import com.videoclub.utils.RestClient;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -36,6 +40,8 @@ import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
+
+import com.videoclub.R;
 
 /**
  * NewHomeScreenActivity for Android TV
@@ -83,7 +89,7 @@ public class NewHomeScreenActivity extends FragmentActivity {
 
     // Services
     private SessionManager sessionManager;
-    private RestClient.ApiService apiService;
+    private ApiService apiService; // Instead of RestClient.ApiService
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -410,21 +416,21 @@ public class NewHomeScreenActivity extends FragmentActivity {
         } else {
             // Handle special menu items
             switch (item.getName()) {
-                case "Settings":
-                    // Navigate to settings
-                    Intent settingsIntent = new Intent(this, SettingsActivity.class);
-                    startActivity(settingsIntent);
-                    break;
-
-                case "VOD":
-                    // Navigate to VOD screen
-                    Intent vodIntent = new Intent(this, VODScreenActivity.class);
-                    startActivity(vodIntent);
-                    break;
+//                case "Settings":
+//                    // Navigate to settings
+//                    Intent settingsIntent = new Intent(this, SettingsActivity.class);
+//                    startActivity(settingsIntent);
+//                    break;
+//
+//                case "VOD":
+//                    // Navigate to VOD screen
+//                    Intent vodIntent = new Intent(this, VODScreenActivity.class);
+//                    startActivity(vodIntent);
+//                    break;
 
                 case "My Channels":
                     // Navigate to my channels
-                    Intent myChannelsIntent = new Intent(this, MyChannelActivity.class);
+                    Intent myChannelsIntent = new Intent(this, MyChannelsActivity.class);
                     startActivity(myChannelsIntent);
                     break;
 
@@ -439,7 +445,7 @@ public class NewHomeScreenActivity extends FragmentActivity {
 
                 case "Cloud Star":
                     // Navigate to cloud star
-                    Intent cloudStarIntent = new Intent(this, OSMScreenActivity.class);
+                    Intent cloudStarIntent = new Intent(this, CloudStarActivity.class);
                     cloudStarIntent.putExtra("currentLatitude", currentLatitude);
                     cloudStarIntent.putExtra("currentLongitude", currentLongitude);
                     startActivity(cloudStarIntent);
@@ -507,9 +513,66 @@ public class NewHomeScreenActivity extends FragmentActivity {
     /**
      * Scroll down in left menu
      */
+//    private void scrollDownLeftMenu() {
+//        if (leftMenuItems.size() > 1) {
+//            int currentPosition = leftMenuGridView.getFirstVisiblePosition();
+//            if (currentPosition > 1) {
+//                leftMenuGridView.smoothScrollToPosition(currentPosition - 2);
+//            } else {
+//                leftMenuGridView.smoothScrollToPosition(0);
+//            }
+//        }
+//    }
+//
+//    /**
+//     * Scroll up in left menu
+//     */
+//    private void scrollUpLeftMenu() {
+//        if (leftMenuItems.size() > 1) {
+//            int currentPosition = leftMenuGridView.getFirstVisiblePosition();
+//            if (currentPosition < leftMenuItems.size() - 3) {
+//                leftMenuGridView.smoothScrollToPosition(currentPosition + 2);
+//            } else {
+//                leftMenuGridView.smoothScrollToPosition(leftMenuItems.size() - 1);
+//            }
+//        }
+//    }
+//
+//    /**
+//     * Scroll down in right menu
+//     */
+//    private void scrollDownRightMenu() {
+//        if (rightMenuItems.size() > 1) {
+//            int currentPosition = rightMenuGridView.getFirstVisiblePosition();
+//            if (currentPosition > 1) {
+//                rightMenuGridView.smoothScrollToPosition(currentPosition - 2);
+//            } else {
+//                rightMenuGridView.smoothScrollToPosition(0);
+//            }
+//        }
+//    }
+//
+//    /**
+//     * Scroll up in right menu
+//     */
+//    private void scrollUpRightMenu() {
+//        if (rightMenuItems.size() > 1) {
+//            int currentPosition = rightMenuGridView.getFirstVisiblePosition();
+//            if (currentPosition < rightMenuItems.size() - 3) {
+//                rightMenuGridView.smoothScrollToPosition(currentPosition + 2);
+//            } else {
+//                rightMenuGridView.smoothScrollToPosition(rightMenuItems.size() - 1);
+//            }
+//        }
+//    }
+
+    /**
+     * Scroll down in left menu
+     * Uses GridViewExtensions to get first visible position
+     */
     private void scrollDownLeftMenu() {
         if (leftMenuItems.size() > 1) {
-            int currentPosition = leftMenuGridView.getFirstVisiblePosition();
+            int currentPosition = GridViewExtensions.getFirstVisiblePosition(leftMenuGridView);
             if (currentPosition > 1) {
                 leftMenuGridView.smoothScrollToPosition(currentPosition - 2);
             } else {
@@ -520,10 +583,11 @@ public class NewHomeScreenActivity extends FragmentActivity {
 
     /**
      * Scroll up in left menu
+     * Uses GridViewExtensions to get first visible position
      */
     private void scrollUpLeftMenu() {
         if (leftMenuItems.size() > 1) {
-            int currentPosition = leftMenuGridView.getFirstVisiblePosition();
+            int currentPosition = GridViewExtensions.getFirstVisiblePosition(leftMenuGridView);
             if (currentPosition < leftMenuItems.size() - 3) {
                 leftMenuGridView.smoothScrollToPosition(currentPosition + 2);
             } else {
@@ -534,10 +598,11 @@ public class NewHomeScreenActivity extends FragmentActivity {
 
     /**
      * Scroll down in right menu
+     * Uses GridViewExtensions to get first visible position
      */
     private void scrollDownRightMenu() {
         if (rightMenuItems.size() > 1) {
-            int currentPosition = rightMenuGridView.getFirstVisiblePosition();
+            int currentPosition = GridViewExtensions.getFirstVisiblePosition(rightMenuGridView);
             if (currentPosition > 1) {
                 rightMenuGridView.smoothScrollToPosition(currentPosition - 2);
             } else {
@@ -548,10 +613,11 @@ public class NewHomeScreenActivity extends FragmentActivity {
 
     /**
      * Scroll up in right menu
+     * Uses GridViewExtensions to get first visible position
      */
     private void scrollUpRightMenu() {
         if (rightMenuItems.size() > 1) {
-            int currentPosition = rightMenuGridView.getFirstVisiblePosition();
+            int currentPosition = GridViewExtensions.getFirstVisiblePosition(rightMenuGridView);
             if (currentPosition < rightMenuItems.size() - 3) {
                 rightMenuGridView.smoothScrollToPosition(currentPosition + 2);
             } else {

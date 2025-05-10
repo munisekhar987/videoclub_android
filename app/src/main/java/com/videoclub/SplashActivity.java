@@ -1,5 +1,6 @@
 package com.videoclub;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
@@ -8,13 +9,14 @@ import android.widget.ImageView;
 
 import androidx.fragment.app.FragmentActivity;
 
-import com.videoclub.utilities.Images;
-import com.videoclub.utilities.SessionManager;
+import com.videoclub.utils.Images;
+import com.videoclub.utils.SessionManager;
 
 /**
  * SplashActivity - Displays splash screen and handles navigation to appropriate screen
  * Converted from React Native Splash component
  */
+@SuppressLint("CustomSplashScreen")
 public class SplashActivity extends FragmentActivity {
     private static final int SPLASH_TIMEOUT = 3000; // 3 seconds
     private SessionManager sessionManager;

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="60dp"
+    android:viewportWidth="200"
+    android:viewportHeight="60">
+
+    <!-- Background -->
+    <path
+        android:fillColor="#FF5722"
+        android:pathData="M0,0L200,0L200,60L0,60z" />
+
+    <!-- Text: DBUZZ -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M60,35L60,20L80,20C85.523,20 90,24.477 90,30C90,35.523 85.523,40 80,40L60,40L60,35zM65,35L75,35C82.732,35 85,32.732 85,30C85,27.268 82.732,25 75,25L65,25L65,35z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M95,40L95,20L115,20C120.523,20 125,24.477 125,30C125,32.761 123.761,35.228 121.5,36.5L127,45L120,45L115,37.5L100,37.5L100,40L95,40zM100,32.5L110,32.5C112.761,32.5 115,31.381 115,30C115,28.619 112.761,27.5 110,27.5L100,27.5L100,32.5z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M130,40L130,20L145,20L145,25L135,25L135,28L145,28L145,33L135,33L135,35L145,35L145,40L130,40z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M150,40L150,20L165,20L165,25L155,25L155,28L165,28L165,33L155,33L155,35L165,35L165,40L150,40z" />
+
+    <!-- Buzz icon - sound waves -->
+    <path
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="2"
+        android:pathData="M40,30C45,30 45,25 50,25" />
+    <path
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="2"
+        android:pathData="M40,30C45,30 45,35 50,35" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M30,30m-10,0a10,10 0,1 1,20 0a10,10 0,1 1,-20 0" />
+</vector>

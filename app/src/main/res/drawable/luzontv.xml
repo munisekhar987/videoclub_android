@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="60dp"
+    android:viewportWidth="200"
+    android:viewportHeight="60">
+
+    <!-- Background -->
+    <path
+        android:fillColor="#3F51B5"
+        android:pathData="M0,0L200,0L200,60L0,60z" />
+
+    <!-- Text: LUZON TV -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M30,35L30,20L35,20L35,35L30,35zM40,35L40,20L45,20L45,30L55,30L55,35L40,35zM60,35L60,20L80,20L80,25L65,25L65,26L80,26L80,35L60,35zM65,30L65,31L75,31L75,30L65,30zM85,35L85,20L105,20L105,35L100,35L100,25L90,25L90,35L85,35zM110,35L110,20L115,20L115,35L110,35zM120,35L120,20L140,20L140,25L125,25L125,35L120,35zM145,35L145,20L165,20L165,35L145,35zM150,25L150,30L160,30L160,25L150,25z" />
+
+    <!-- TV antenna icon -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M170,30L180,20L185,20L175,30z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M170,30L180,40L185,40L175,30z" />
+</vector>

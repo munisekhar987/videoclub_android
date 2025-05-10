@@ -39,6 +39,7 @@ import com.videoclub.models.Channel;
 import com.videoclub.models.KaraokeItem;
 import com.videoclub.models.TVCategory;
 import com.videoclub.utils.Constants;
+import com.videoclub.utils.Images;
 import com.videoclub.utils.RestClient;
 
 import org.json.JSONArray;

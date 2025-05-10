@@ -122,4 +122,7 @@
     <string name="scroll_up">Scroll Up</string>
     <string name="scroll_down">Scroll Down</string>
     <string name="menu_item">Menu Item</string>
+    <string name="refresh">REFRESH</string>
+    <string name="loading_location">loading_location</string>
+    <string name="loading_map">loading map\n</string>
 </resources>

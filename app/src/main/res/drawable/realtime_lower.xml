@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="60dp"
+    android:viewportWidth="200"
+    android:viewportHeight="60">
+
+    <!-- Background -->
+    <path
+        android:fillColor="#00BCD4"
+        android:pathData="M0,0L200,0L200,60L0,60z" />
+
+    <!-- Text: REALTIME -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M30,40L30,20L50,20L50,25L35,25L35,28L50,28L50,33L35,33L35,35L50,35L50,40L30,40z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M55,40L55,20L75,20L75,25L60,25L60,28L75,28L75,33L60,33L60,35L75,35L75,40L55,40z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M80,40L80,20L85,20L85,25L95,25L95,20L100,20L100,40L95,40L95,30L85,30L85,40L80,40z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M105,40L105,20L110,20L110,40L105,40z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M115,40L115,20L135,20L135,25L120,25L120,28L135,28L135,33L120,33L120,35L135,35L135,40L115,40z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M140,40L140,20L170,20L170,25L145,25L145,40L140,40z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M175,40L175,20L180,20L180,40L175,40z" />
+
+    <!-- Clock icon -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M15,30m-10,0a10,10 0,1 1,20 0a10,10 0,1 1,-20 0" />
+    <path
+        android:fillColor="#00BCD4"
+        android:pathData="M15,30m-7,0a7,7 0,1 1,14 0a7,7 0,1 1,-14 0" />
+    <path
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="2"
+        android:pathData="M15,30L15,25" />
+    <path
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="2"
+        android:pathData="M15,30L19,33" />
+</vector>

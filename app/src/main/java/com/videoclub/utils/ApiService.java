@@ -9,6 +9,7 @@ import retrofit2.http.GET;
 import retrofit2.http.Header;
 import retrofit2.http.POST;
 import retrofit2.http.Path;
+import retrofit2.http.Url;
 
 /**
  * Retrofit API service interface for network requests
@@ -116,4 +117,11 @@ public interface ApiService {
      */
     @GET("api/p/categories/top_menu")
     Call<ResponseBody> getTopMenu(@Header("Authorization") String token);
+
+    /**
+     * Get URL content (for places API and other external URLs)
+     * Added for NearbyTestScreenActivity
+     */
+    @GET
+    Call<ResponseBody> getUrl(@Url String url);
 }

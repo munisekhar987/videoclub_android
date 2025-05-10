@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="60dp"
+    android:viewportWidth="200"
+    android:viewportHeight="60">
+
+    <!-- Background -->
+    <path
+        android:fillColor="#2196F3"
+        android:pathData="M0,0L200,0L200,60L0,60z" />
+
+    <!-- Text: LET'S MEET -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M20,40L20,20L25,20L25,35L40,35L40,40L20,40z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M45,40L45,20L65,20L65,25L50,25L50,28L65,28L65,33L50,33L50,35L65,35L65,40L45,40z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M70,40L70,20L85,20L85,40L80,40L80,25L75,25L75,40L70,40z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M88,25L88,20L98,20L98,25L88,25z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M108,40L108,20L125,20C130.523,20 135,24.477 135,30C135,35.523 130.523,40 125,40L108,40zM113,35L122,35C125.314,35 130,33.314 130,30C130,26.686 125.314,25 122,25L113,25L113,35z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M140,40L140,20L145,20L145,28L155,28L155,20L160,20L160,40L155,40L155,33L145,33L145,40L140,40z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M165,40L165,20L185,20L185,25L170,25L170,28L185,28L185,33L170,33L170,35L185,35L185,40L165,40z" />
+
+    <!-- Meeting icon -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M100,35m-5,0a5,5 0,1 1,10 0a5,5 0,1 1,-10 0" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M90,35m-5,0a5,5 0,1 1,10 0a5,5 0,1 1,-10 0" />
+</vector>

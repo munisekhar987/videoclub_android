@@ -4,28 +4,32 @@ import androidx.annotation.DrawableRes;
 
 import com.videoclub.R;
 
+/**
+ * Utility class for image resource constants
+ * Used to centralize access to drawable resources across the application
+ */
 public class Images {
     public static final int splash = R.drawable.app_icon;
-    public static final int dropDown = R.drawable.down_arrow;
+    //public static final int dropDown = R.drawable.down_arrow;
 
     public static final int newlogo = R.drawable.newlogo;
     public static final int newlogo1 = R.drawable.newlogo1;
     public static final int welcome_bg = R.drawable.welcome;
-    public static final int leftshift = R.drawable.lefticon;
-    public static final int rightshift = R.drawable.righticon;
+    //public static final int leftshift = R.drawable.lefticon;
+    //public static final int rightshift = R.drawable.righticon;
 
-    // Lower icons
+    // Lower icons - Uncomment as needed
     public static final int luzontvlower = R.drawable.luzontv;
     public static final int mindanaolower = R.drawable.mindanao;
     public static final int dbuzzlower = R.drawable.dbuzz;
     public static final int visayastvlower = R.drawable.visayastv;
-    public static final int letsmeetlower = R.drawable.letsmeetlower;
-    public static final int pagerlower = R.drawable.pagerlower;
-    public static final int realtimelower = R.drawable.realtimelower;
-    public static final int concyellow = R.drawable.concyellow;
+    public static final int letsmeetlower = R.drawable.letsmeet_lower;
+    public static final int pagerlower = R.drawable.pager_lower;
+    public static final int realtimelower = R.drawable.realtime_lower;
+    public static final int concyellow = R.drawable.conc_yellow;
 
     // Button images
-    public static final int conciegebanner = R.drawable.conciegebanner;
+    //public static final int conciegebanner = R.drawable.conciegebanner;
 
     public static final int backimg = R.drawable.backimg;
 

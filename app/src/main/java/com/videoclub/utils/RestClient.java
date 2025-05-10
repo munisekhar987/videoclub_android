@@ -2,6 +2,8 @@ package com.videoclub.utils;
 
 import android.content.Context;
 
+import com.google.gson.GsonBuilder;
+
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
@@ -11,14 +13,19 @@ import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.RequestBody;
 import okhttp3.Response;
+import okhttp3.logging.HttpLoggingInterceptor;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 public class RestClient {
+    // Direct OkHttp client for manual HTTP requests
     private static final OkHttpClient client = new OkHttpClient.Builder()
             .connectTimeout(30, TimeUnit.SECONDS)
             .readTimeout(30, TimeUnit.SECONDS)
             .writeTimeout(30, TimeUnit.SECONDS)
             .build();
 
+    // Manual OkHttp methods
     public static void get(Context context, String endpoint, String token, Callback callback) {
         String baseUrl = context.getString(R.string.api_base_url);
         String url = baseUrl + endpoint;
@@ -72,6 +79,7 @@ public class RestClient {
         client.newCall(request).enqueue(callback);
     }
 
+    // Retrofit implementation
     private static final String BASE_URL = "http://api.msgnaa.info/";
     private static Retrofit retrofit = null;
 
@@ -96,7 +104,7 @@ public class RestClient {
             retrofit = new Retrofit.Builder()
                     .baseUrl(BASE_URL)
                     .client(client)
-                    .addConverterFactory(GsonConverterFactory.create())
+                    .addConverterFactory(GsonConverterFactory.create(new GsonBuilder().create()))
                     .build();
         }
         return retrofit;

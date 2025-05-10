@@ -44,11 +44,11 @@ dependencies {
 
     // Network
     implementation("com.squareup.okhttp3:okhttp:4.11.0")
+    implementation(libs.play.services.maps)
 
     // Image loading
     annotationProcessor("com.github.bumptech.glide:compiler:4.16.0")
 
-    // JSON parsing
     // ExoPlayer dependencies
     implementation("com.google.android.exoplayer:exoplayer-core:2.18.7")
     implementation("com.google.android.exoplayer:exoplayer-ui:2.18.7")
@@ -96,5 +96,16 @@ dependencies {
     // Maps
     implementation("org.osmdroid:osmdroid-android:6.1.16")
     implementation("org.osmdroid:osmdroid-mapsforge:6.1.16")
+
+    // Retrofit for API calls
+    implementation("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
+
+    // OkHttp for network requests
+    implementation("com.squareup.okhttp3:okhttp:4.11.0")
+    implementation("com.squareup.okhttp3:logging-interceptor:4.11.0")
+
+    // Gson for JSON parsing
+    implementation("com.google.code.gson:gson:2.10.1")
 
 }
